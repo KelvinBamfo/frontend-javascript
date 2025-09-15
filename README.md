@@ -26,7 +26,7 @@ Create an interface named `Student` with the following properties:
 - Jest (for testing)
 - HTML Webpack Plugin
 
-## 🚀 Getting Started
+## Getting Started
 
 ```bash
 # Install dependencies
