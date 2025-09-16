@@ -38,30 +38,24 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Named function with destructuring and exact return format
-function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
-  return `${firstName}. ${lastName}`;
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName[0]}. ${lastName}`;
 }
 
-// Example usage
-console.log(printTeacher({ firstName: "Ernest", lastName: "Arhin" })); // Ernest. Arhin
 console.log(printTeacher("Ernest", "Arhin")); // E. Arhin
 
 // Task 4: Writing a class
 
-// Interface for constructor
 interface StudentConstructor {
   firstName: string;
   lastName: string;
 }
 
-// Interface for class methods
 interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
 
-// Class implementation
 class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
@@ -80,7 +74,6 @@ class StudentClass implements StudentClassInterface {
   }
 }
 
-// Example usage
 const student1 = new StudentClass({ firstName: 'Kelvin', lastName: 'Bamfo' });
 console.log(student1.workOnHomework()); // Currently working
 console.log(student1.displayName());    // Kelvin
