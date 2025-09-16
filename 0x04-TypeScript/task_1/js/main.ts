@@ -35,14 +35,17 @@ console.log(director1);
 
 // Task 3: printTeacher function and interface
 interface printTeacherFunction {
-  (Ernest: string, Arhin: string): string;
+  (firstName: string, lastName: string): string;
 }
 
-// ✅ Named function with destructuring and exact return format
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName[E]}. ${Arhin}`;
+// Named function with destructuring and exact return format
+function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
+  return `${firstName}. ${lastName}`;
 }
 
 // Example usage
-console.log(printTeacher("Ernest", "Arhin")); // J. Doe
+console.log(printTeacher({ firstName: "Ernest", lastName: "Arhin" })); // E. Arhin
 
+
+// Example usage
+console.log(printTeacher("Ernest", "Arhin")); // E. Arhin
