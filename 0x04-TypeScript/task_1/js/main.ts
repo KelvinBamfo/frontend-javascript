@@ -18,7 +18,7 @@ const teacher3: Teacher = {
 
 console.log(teacher3);
 
-
+// Task 2: Director interface extending Teacher
 interface Director extends Teacher {
   numberOfReports: number;
 }
@@ -33,6 +33,7 @@ const director1: Director = {
 
 console.log(director1);
 
+// Task 3: printTeacher function and interface
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
@@ -42,4 +43,5 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
 };
 
 // Example usage
-console.log(printTeacher("Ernest", "Arhin"));
+console.log(printTeacher("John", "Doe")); // J. Doe
+
