@@ -1,4 +1,3 @@
-// Task 1: Teacher interface
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
