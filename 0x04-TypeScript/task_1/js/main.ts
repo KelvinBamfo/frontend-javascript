@@ -35,12 +35,12 @@ console.log(director1);
 
 // Task 3: printTeacher function and interface
 interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+  (Ernest: string, Arhin: string): string;
 }
 
 // ✅ Named function with destructuring and exact return format
 function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName[0]}. ${lastName}`;
+  return `${firstName[E]}. ${Arhin}`;
 }
 
 // Example usage
