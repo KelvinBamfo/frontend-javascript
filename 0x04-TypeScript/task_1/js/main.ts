@@ -38,10 +38,11 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
+// ✅ Named function with destructuring and exact return format
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName[0]}. ${lastName}`;
+}
 
 // Example usage
-console.log(printTeacher("John", "Doe")); // J. Doe
+console.log(printTeacher("Ernest", "Arhin")); // J. Doe
 
