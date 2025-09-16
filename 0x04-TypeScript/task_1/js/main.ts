@@ -1,3 +1,4 @@
+// Task 1: Teacher interface
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -40,4 +41,5 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
+// Example usage
 console.log(printTeacher("Ernest", "Arhin"));
