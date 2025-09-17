@@ -1,61 +1,28 @@
-const path = require("path");
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
-  entry: "./js/main.ts",
-  devtool: "inline-source-map",
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        loader: 'ts-loader',
-        options: {
-          transpileOnly: true
-        }
-      }
-    ]
+  entry: './js/main.ts',   // your TypeScript entry point
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: ['.ts', '.js'], // allow imports without extensions
   },
-  devServer: {
-    contentBase: "./dist"
-  },
-  plugins: [
-    new ForkTsCheckerWebpackPlugin(),
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      title: "Development"
-    })
-  ],
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist")
-  }
-};
-module.exports = {
-  mode: 'development', // or 'production'
-  entry: './js/main.ts',
-  // ... rest of your config
-};
-module.exports = {
-  entry: './js/main.ts',
   module: {
     rules: [
       {
-        test: /\.ts$/,
-        use: 'ts-loader',
+        test: /\.ts$/,          // all .ts files
+        use: 'ts-loader',       // compile with ts-loader
         exclude: /node_modules/,
       },
     ],
   },
-  resolve: {
-    extensions: ['.ts', '.js'],
-  },
-  output: {
-    filename: 'main.js',
-  },
-  mode: 'development', // or 'production'
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html', // make sure you have an index.html in task_2
+    }),
+  ],
+  mode: 'development', // or 'production' when you’re ready to optimize
 };
