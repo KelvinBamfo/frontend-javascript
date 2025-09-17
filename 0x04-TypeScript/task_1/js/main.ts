@@ -16,6 +16,14 @@ const teacher3: Teacher = {
   contract: false,
 };
 
+// should print
+// Object
+// contract: false
+// firstName: "Ernest"
+// fullTimeEmployee: false
+// lastName: "Arhin"
+// location: "Assin Fosu"
+
 console.log(teacher3);
 
 // Task 2: Director interface extending Teacher
