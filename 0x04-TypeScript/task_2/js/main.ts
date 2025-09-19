@@ -49,6 +49,10 @@ function createEmployee(salary: number | string): Director | Teacher {
   return new Director();
 }
 // Type predicate
+export function isDirector(employee: Director | Teacher): employee is Director {
+  return employee instanceof Director;
+}
+
 function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 
