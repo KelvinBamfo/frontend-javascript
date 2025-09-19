@@ -68,13 +68,17 @@ console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
 type Subjects = 'Math' | 'History';
 
 // Define the function
-function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass:Subjects): string {
   if (todayClass === 'Math') {
     return 'Teaching Math';
   } else {
     return 'Teaching History';
   }
 }
+
+// Expected result:
+teachClass('Math'); // Teaching Math
+teachClass('History'); // Teaching History
 
 // Example usage
 console.log(teachClass('Math'));     // Output: Teaching Math
