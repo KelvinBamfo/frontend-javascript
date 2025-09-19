@@ -76,6 +76,10 @@ function teachClass(todayClass: Subjects): string {
   }
 }
 
+// Expected result:
+teachClass('Math'); // Teaching Math
+teachClass('History'); // Teaching History
+
 // Example usage
 console.log(teachClass('Math'));     // Output: Teaching Math
 console.log(teachClass('History'));  // Output: Teaching History
